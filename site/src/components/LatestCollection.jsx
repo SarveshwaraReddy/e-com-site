@@ -14,7 +14,7 @@ const LatestCollection = () => {
         <div className="my-10">
             <div className="text-center py-8 text-3xl">
                 <Title text1={"LATEST"} text2={"COLLECTIONS"} />
-                <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-700">
+                <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base" style={{color: '#45413E'}}>
                     Vibrant cobalt hues and high-tech fabrics define 2026’s bold
                     collections, blending nostalgic power shoulders with innovative,
                     sustainable, and air-cleansing garment designs.

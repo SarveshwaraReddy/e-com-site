@@ -17,12 +17,13 @@ const Searchbar = () => {
     }
   }, [location]);
   return showSearch && visible ? (
-    <div className="border-t border-b bg-gray-50 text-center">
-      <div className="inline-flex items-center justify-center border border-gray-400 px-5 py-2 my-5 mx-3 rounded-full w-3/4 sm:w-1/2">
+    <div className="border-t border-b transition-all duration-600" style={{backgroundColor: '#F5F0E8', borderColor: '#E8DFD5'}} >
+      <div className="inline-flex items-center justify-center border px-5 py-2 my-5 mx-3 rounded-full w-3/4 sm:w-1/2 transition-all duration-600" style={{borderColor: '#9C9B7A', backgroundColor: '#FDF9F3', color: '#45413E'}}>
         <input
           value={search}
           onChange={(e) => setsearch(e.target.value)}
           className="flex-1 outline-none bg-inherit text-sm"
+          style={{color: '#45413E'}}
           type="text"
           placeholder="Search"
         />
@@ -30,7 +31,7 @@ const Searchbar = () => {
       </div>
       <img
         onClick={() => setshowSearch(false)}
-        className="inline w-3 cursor-pointer"
+        className="inline w-3 cursor-pointer transition-all duration-600 hover:opacity-60"
         src={assets.cross_icon}
         alt=""
       />

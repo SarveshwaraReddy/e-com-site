@@ -11,7 +11,7 @@ const PlaceOrder = () => {
 
   const {navigate} = useContext(ShopContext)
   return (
-    <div className="flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t">
+    <div className="flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t" style={{borderColor: '#E8DFD5', color: '#45413E'}}>
       {/* =================================Left Side============================================== */}
       <div className="flex flex-col gap-4 w-full sm:max-w-[480px]">
         <div className="text-xl sm:text-2xl my-3">
@@ -19,53 +19,62 @@ const PlaceOrder = () => {
         </div>
         <div className="flex gap-3">
           <input
-            className="border border-gray-300 py-1.5 px-3.5 w-full"
+            className="border py-1.5 px-3.5 w-full transition-all duration-600 focus:border-[#9C9B7A] focus:outline-none"
+            style={{borderColor: '#E8DFD5', color: '#45413E'}}
             type="text"
             placeholder="First name"
           />
           <input
-            className="border border-gray-300 py-1.5 px-3.5 w-full"
+            className="border py-1.5 px-3.5 w-full transition-all duration-600 focus:border-[#9C9B7A] focus:outline-none"
+            style={{borderColor: '#E8DFD5', color: '#45413E'}}
             type="text"
             placeholder="Last name"
           />
         </div>
 
         <input
-          className="border border-gray-300 py-1.5 px-3.5 w-full"
+          className="border py-1.5 px-3.5 w-full transition-all duration-600 focus:border-[#9C9B7A] focus:outline-none"
+          style={{borderColor: '#E8DFD5', color: '#45413E'}}
           type="email"
           placeholder="Enter email address"
         />
         <input
-          className="border border-gray-300 py-1.5 px-3.5 w-full"
+          className="border py-1.5 px-3.5 w-full transition-all duration-600 focus:border-[#9C9B7A] focus:outline-none"
+          style={{borderColor: '#E8DFD5', color: '#45413E'}}
           type="text"
           placeholder="Street line"
         />
-        <div className="flex gap- 3">
+        <div className="flex gap-3">
           <input
-            className="border border-gray-300 py-1.5 px-3.5 w-full"
+            className="border py-1.5 px-3.5 w-full transition-all duration-600 focus:border-[#9C9B7A] focus:outline-none"
+            style={{borderColor: '#E8DFD5', color: '#45413E'}}
             type="text"
             placeholder="City"
           />
           <input
-            className="border border-gray-300 py-1.5 px-3.5 w-full"
+            className="border py-1.5 px-3.5 w-full transition-all duration-600 focus:border-[#9C9B7A] focus:outline-none"
+            style={{borderColor: '#E8DFD5', color: '#45413E'}}
             type="text"
             placeholder="State"
           />
         </div>
         <div className="flex gap-3">
           <input
-            className="border border-gray-300 py-1.5 px-3.5 w-full"
+            className="border py-1.5 px-3.5 w-full transition-all duration-600 focus:border-[#9C9B7A] focus:outline-none"
+            style={{borderColor: '#E8DFD5', color: '#45413E'}}
             type="number"
             placeholder="Zip-Code"
           />
           <input
-            className="border border-gray-300 py-1.5 px-3.5 w-full"
+            className="border py-1.5 px-3.5 w-full transition-all duration-600 focus:border-[#9C9B7A] focus:outline-none"
+            style={{borderColor: '#E8DFD5', color: '#45413E'}}
             type="text"
             placeholder="Country"
           />
         </div>
         <input
-          className="border border-gray-300 py-1.5 px-3.5 w-full"
+          className="border py-1.5 px-3.5 w-full transition-all duration-600 focus:border-[#9C9B7A] focus:outline-none"
+          style={{borderColor: '#E8DFD5', color: '#45413E'}}
           type="number"
           placeholder="Phone"
         />
@@ -83,36 +92,42 @@ const PlaceOrder = () => {
           <div className="flex gap-3 flex-col lg:flex-row">
             <div
               onClick={() => setMethod("stripe")}
-              className="flex items-center gap-3 border p2 px-3 cursor-pointer"
+              className="flex items-center gap-3 border p2 px-3 cursor-pointer transition-all duration-600 hover:bg-[#F5F0E8]"
+              style={{borderColor: '#E8DFD5'}}
             >
               <p
-                className={`min-w-3.5 h-3.5 border rounded-full ${Method === "stripe" ? "bg-green-400" : ""}`}
+                className={`min-w-3.5 h-3.5 border rounded-full transition-all duration-600 ${Method === "stripe" ? "bg-[#9C9B7A]" : ""}`}
+                style={{borderColor: '#9C9B7A'}}
               ></p>
               <img src={assets.stripe_logo} className="h-5 mx-4" />
             </div>
             <div
               onClick={() => setMethod("razorpay")}
-              className="flex items-center gap-3 border p2 px-3 cursor-pointer"
+              className="flex items-center gap-3 border p2 px-3 cursor-pointer transition-all duration-600 hover:bg-[#F5F0E8]"
+              style={{borderColor: '#E8DFD5'}}
             >
               <p
-                className={`min-w-3.5 h-3.5 border rounded-full ${Method === "razorpay" ? "bg-green-400" : ""}`}
+                className={`min-w-3.5 h-3.5 border rounded-full transition-all duration-600 ${Method === "razorpay" ? "bg-[#9C9B7A]" : ""}`}
+                style={{borderColor: '#9C9B7A'}}
               ></p>
               <img src={assets.razorpay_logo} className="h-5 mx-4" />
             </div>
             <div
               onClick={() => setMethod("cod")}
-              className="flex items-center gap-3 border p2 px-3 cursor-pointer"
+              className="flex items-center gap-3 border p2 px-3 cursor-pointer transition-all duration-600 hover:bg-[#F5F0E8]"
+              style={{borderColor: '#E8DFD5'}}
             >
               <p
-                className={`min-w-3.5 h-3.5 border rounded-full ${Method === "cod" ? "bg-green-400" : ""}`}
+                className={`min-w-3.5 h-3.5 border rounded-full transition-all duration-600 ${Method === "cod" ? "bg-[#9C9B7A]" : ""}`}
+                style={{borderColor: '#9C9B7A'}}
               ></p>
-              <p className="text-gray-500 text-sm font-medium py-2 mx-4">
+              <p className="text-sm font-medium py-2 mx-4" style={{color: '#8B8680'}}>
                 CASH ON DELIVERY{" "}
               </p>
             </div>
           </div>
           <div className="w-full text-end mt-8">
-              <button onClick={()=>navigate('/orders')} className="bg-black text-white cursor-pointer text-sm px-16 rounded py-2">PLACE ORDER</button>
+              <button onClick={()=>navigate('/orders')} className="text-white cursor-pointer text-sm px-16 py-2 transition-all duration-600 hover:opacity-80" style={{backgroundColor: '#9C9B7A'}}> PLACE ORDER</button>
           </div>
         </div>
       </div>
